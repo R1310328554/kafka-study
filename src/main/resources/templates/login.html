@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<h2>Upload</h2>
+<div th:unless="${#lists.isEmpty{records}}"></div>
+    <dl th:each="rec:${records}">
+        <dt>
+            <span> title</span>
+            <span> name</span>
+        </dt>
+        <dd>
+            <span th:text="${rec.titile}">Title </span>
+            <span th:text="${rec.name}">Name </span>
+        </dd>
+    </dl>
+
+<form method="post" action="login">
+    <label> upload a excel</label>
+    username:<input type="text" name="username" >
+    <br/>
+    password:<input type="text" name="password" >
+    <br/>
+    <br/>
+    <input type="submit">
+</form>
+
+</body>
+</html>

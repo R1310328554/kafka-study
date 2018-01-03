@@ -1,0 +1,17 @@
+
+
+
+	<mvc:interceptors>
+		<mvc:interceptor >
+			<mvc:mapping path="/home/*"/>
+			<mvc:mapping path="/aa"/>
+			<bean id="lkInterceptor" class="com.lk.LkInterceptor"></bean>
+		</mvc:interceptor>
+
+	</mvc:interceptors>
+	
+	
+	需要和
+		<mvc:annotation-driven>
+
+		放一起，才会生效
